@@ -22,7 +22,7 @@ export default defineConfig({
 
     sidebar: {
       '/front/': sidebarFront(),
-      '/backend/': sidebarConfig()
+      '/backend/': sidebarBankend()
     },
 
     socialLinks: [
@@ -52,20 +52,7 @@ export default defineConfig({
 function nav() {
   return [
     { text: '前端', link: '/front/vue/axios', activeMatch: '/front/' },
-    // { text: 'Configs', link: '/config/introduction', activeMatch: '/config/' },
-    // {
-    //   text: version,
-    //   items: [
-    //     {
-    //       text: 'Changelog',
-    //       link: 'https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md'
-    //     },
-    //     {
-    //       text: 'Contributing',
-    //       link: 'https://github.com/vuejs/vitepress/blob/main/.github/contributing.md'
-    //     }
-    //   ]
-    // }
+    { text: '后端', link: '/backend/nodejs/egg-jwt', activeMatch: '/backend/' },
   ]
 }
 
@@ -88,15 +75,12 @@ function sidebarFront() {
   ]
 }
 
-function sidebarConfig() {
+function sidebarBankend() {
   return [
     {
-      text: 'Config',
+      text: 'NodeJs',
       items: [
-        { text: 'Introduction', link: '/config/introduction' },
-        { text: 'App Configs', link: '/config/app-configs' },
-        { text: 'Theme Configs', link: '/config/theme-configs' },
-        { text: 'Frontmatter Configs', link: '/config/frontmatter-configs' }
+        { text: 'egg-jwt的使用', link: '/backend/nodejs/egg-jwt' },
       ]
     }
   ]
